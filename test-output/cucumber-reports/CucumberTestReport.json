@@ -1,0 +1,178 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 702038721,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.initializeTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Check item total cost and tax",
+        "description": "",
+        "id": "checkout-items-in-the-basket;check-item-total-cost-and-tax",
+        "after": [
+          {
+            "result": {
+              "duration": 209014063,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.screenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 224226595,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the home page",
+            "match": {
+              "location": "UIStepDefinintion.iAmOnTheHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 673756290,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login in with the following details",
+            "match": {
+              "location": "UIStepDefinintion.i_login_in_with_the_following_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "userName",
+                  "password"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "secret_sauce"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 572873279,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I add the following items to the basket",
+            "match": {
+              "location": "UIStepDefinintion.i_add_the_following_items_to_the_basket(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Sauce Labs Backpack"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Sauce Labs Fleece Jacket"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Sauce Labs Bolt T-Shirt"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Sauce Labs Onesie"
+                ],
+                "line": 14
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76235783,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I  should see 4 items added to the shopping cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 14
+                }
+              ],
+              "location": "UIStepDefinintion.i_should_see_items_added_to_the_shopping_cart(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 138808042,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I click on the shopping cart",
+            "match": {
+              "location": "UIStepDefinintion.i_click_on_the_shopping_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "I verify that the QTY count for each item should be 1",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "I remove the following item:",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "Sauce Labs Fleece Jacket"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Checkout items in the basket",
+    "description": "Please use home page of https://www.saucedemo.com/",
+    "id": "checkout-items-in-the-basket",
+    "keyword": "Feature",
+    "uri": "features/UI-Test.feature"
+  }
+]
