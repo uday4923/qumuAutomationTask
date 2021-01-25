@@ -45,6 +45,10 @@ public class GetUserLink extends BaseApi {
 		super.addPathParam(key, value);
 	}
 	
+	public void updateRequestQuery(String key, String value) throws IOException {
+		super.addQueryParam(key, value);
+	}
+	
 	public void executeAssertSuccess() throws Exception {
 		this.createResponse();
 		Assert.assertEquals(200, this.getApiResponse().getStatusCode());

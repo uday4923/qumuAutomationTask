@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2876" started-at="2021-01-25T10:41:43 IST" finished-at="2021-01-25T10:41:45 IST">
+  <suite name="Default suite" duration-ms="17905" started-at="2021-01-25T15:37:08 IST" finished-at="2021-01-25T15:37:26 IST">
     <groups>
       <group name="cucumber">
         <method signature="RunnerTest.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="feature" class="qumu.RunnerTest"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="2876" started-at="2021-01-25T10:41:43 IST" finished-at="2021-01-25T10:41:45 IST">
+    <test name="Default test" duration-ms="17905" started-at="2021-01-25T15:37:08 IST" finished-at="2021-01-25T15:37:26 IST">
       <class name="qumu.RunnerTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="setUpClass" is-config="true" duration-ms="119" started-at="2021-01-25T10:41:43 IST" finished-at="2021-01-25T10:41:43 IST">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="setUpClass" is-config="true" duration-ms="131" started-at="2021-01-25T15:37:08 IST" finished-at="2021-01-25T15:37:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="feature" duration-ms="2652" started-at="2021-01-25T10:41:43 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-01-25T10:41:45 IST">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="feature" duration-ms="12815" started-at="2021-01-25T15:37:08 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-01-25T15:37:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="feature" duration-ms="1171" started-at="2021-01-25T15:37:21 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-01-25T15:37:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Qumu  Sample Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="feature" duration-ms="3667" started-at="2021-01-25T15:37:22 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-01-25T15:37:26 IST">
           <params>
             <param index="0">
               <value>
@@ -25,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="tearDownClass" is-config="true" duration-ms="40" started-at="2021-01-25T10:41:45 IST" finished-at="2021-01-25T10:41:45 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:qumu.RunnerTest@6fe7aac8]" name="tearDownClass" is-config="true" duration-ms="44" started-at="2021-01-25T15:37:26 IST" finished-at="2021-01-25T15:37:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

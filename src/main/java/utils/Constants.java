@@ -6,6 +6,7 @@ public class Constants {
 		public static final String GET_USERS = "/api/users";
 		public static final String GET_USER = "/api/users/{id}";
 		public static final String CREATE_USER = "/api/users";
+		public static final String LOGIN_USER = "/api/login";
 	}
 
 }

@@ -1,3 +1,4 @@
+@UI
 Feature: Qumu  Sample Test
 
   Scenario: Sample

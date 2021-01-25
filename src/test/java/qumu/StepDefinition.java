@@ -2,18 +2,22 @@ package qumu;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import api.builder.CreateUserLink;
 import api.builder.GetUserLink;
 import api.builder.GetUserListLink;
+import api.builder.LoginUserLink;
 import api.pojo.GetUserListResponseDTO;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import edu.emory.mathcs.backport.java.util.Arrays;
 import io.restassured.path.json.JsonPath;
 import junit.framework.Assert;
 
@@ -21,9 +25,11 @@ public class StepDefinition {
 	int numOfPages;
 	int userCount;
 	List<GetUserListResponseDTO.Datum> userData = new ArrayList<GetUserListResponseDTO.Datum>();
+	Set<String> userSetData = new HashSet<String>();
 	GetUserListLink getUserListLink;
 	GetUserLink getUserLink;
 	CreateUserLink createUserLink;
+	LoginUserLink loginUserLink;
 
 	public void getListOfUsers(String pageNum) throws Exception {
 		getUserListLink = new GetUserListLink("");
@@ -89,26 +95,39 @@ public class StepDefinition {
 	}
 
 	@Given("I login unsuccessfully with the following data")
-	public void iLoginSuccesfullyWithFollowingData(DataTable dt) {
-
+	public void iLoginSuccesfullyWithFollowingData(DataTable dt) throws Exception {
+		List<Map<String, String>> rows = dt.asMaps(String.class, String.class);
+	    loginUserLink = new LoginUserLink(LoginUserLink.sampleRequest);
+	    loginUserLink.updateRequest(rows.get(0).get("Email"), rows.get(0).get("Password"));
+	    loginUserLink.createResponse();
 	}
 
 	@Given("^I wait for the user list to load$")
-	public void iWaitForUserListToLoad() {
-
+	public void iWaitForUserListToLoad() throws Exception {
+		getUserListLink = new GetUserListLink("");
+		getUserListLink.updateRequest("delay", "3");
+		getUserListLink.createResponse();
 	}
 
 	@Then("I should see that every user has a unique id")
 	public void iShouldSeeThatEveryUserHasAUniqueID() {
-
-		// Please not that we need to check all values are unique in the list.
+		userData = getUserListLink.getResponse().getData();
+		for(int i = 0; i < userData.size(); i++) {
+			userSetData.add(userData.get(i).getId().toString());
+		}
+		Assert.assertEquals(userData.size(), userSetData.size());
 	}
 
 	@Then("^I should get a response code of (\\d+)$")
 	public void iShouldGetAResponseCodeOf(int responseCode) {
+		Assert.assertEquals(loginUserLink.getApiResponse().getStatusCode(), responseCode);
 	}
 
 	@And("^I should see the following response message:$")
-	public void iShouldSeeTheFollowingResponseMessage() {
+	public void iShouldSeeTheFollowingResponseMessage(DataTable dt) {
+		List<String> list = Arrays.asList(dt.asList(String.class).get(0).split(":"));
+		System.out.println(list.get(1).trim());
+		System.out.println(loginUserLink.getResponse().getError());
+		Assert.assertTrue(list.get(1).trim().contains(loginUserLink.getResponse().getError()));
 	}
 }

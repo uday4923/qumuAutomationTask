@@ -35,6 +35,17 @@ public class GetPage extends BasePage {
 		return elem;
 	}
 
+	protected WebElement element(WebElement element, String elementToken, String... replacements) throws NoSuchElementException {
+		WebElement elem = null;
+		try {
+			elem = wait.waitForElementToBeVisible(element.findElement(getLocator(elementToken, replacements)));
+		} catch (NoSuchElementException excp) {
+			System.out.println("FAILED: Element " + elementToken + " not found on the " + this.pageName + " !!!");
+		}
+
+		return elem;
+	}
+	
 	protected boolean checkIfElementIsNotThere(String eleString) {
 		boolean flag = false;
 		try {
@@ -91,16 +102,8 @@ public class GetPage extends BasePage {
 		return flag;
 	}
 
-	protected List<WebElement> elements(String elementToken, String replacement) {
-		return wait.waitForElementsToBeVisible(driver.findElements(getLocator(elementToken, replacement)));
-	}
-
-	protected List<WebElement> elements(String elementToken, String replacement1, String replacement2) {
-		return driver.findElements(getLocator(elementToken, replacement1, replacement2));
-	}
-
-	protected List<WebElement> elements(String elementToken) {
-		return elements(elementToken, "");
+	protected List<WebElement> elements(String elementToken, String... replacements) {
+		return wait.waitForElementsToBeVisible(driver.findElements(getLocator(elementToken, replacements)));
 	}
 
 	protected void _waitForElementToDisappear(String elementToken, String replacement) {

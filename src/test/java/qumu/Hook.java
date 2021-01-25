@@ -20,7 +20,7 @@ public class Hook extends BasePage {
     private static final int WAIT_SEC = 20;
 
 
-    @Before()
+    @Before("@UI")
     public void initializeTest() {
         browsersetup.selectBrowser();
         driver.manage().deleteAllCookies();
@@ -33,7 +33,7 @@ public class Hook extends BasePage {
     /**
      * Executed after each UI tagged scenario
      */
-    @After()
+    @After("@UI")
     public void screenshot(Scenario scenario) {
         String screenShotFilename = scenario.getName().replace(" ", "")
                 + new Timestamp(new Date().getTime()).toString().replaceAll("[^a-zA-Z0-9]", "")

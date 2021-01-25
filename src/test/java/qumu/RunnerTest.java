@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "classpath:features/UI-Test.feature",
+        features = "classpath:features/",
         glue = {"qumu"},
         tags = {},
         format = {

@@ -1,8 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><testng-results failed="0" passed="0" skipped="1" total="1">
-<suite duration-ms="2596" name="cucumber.runtime.formatter.TestNGFormatter">
-<test duration-ms="2596" name="cucumber.runtime.formatter.TestNGFormatter">
+<?xml version="1.0" encoding="UTF-8"?><testng-results failed="0" passed="10" skipped="0" total="10">
+<suite duration-ms="17555" name="cucumber.runtime.formatter.TestNGFormatter">
+<test duration-ms="17555" name="cucumber.runtime.formatter.TestNGFormatter">
+<class name="API test">
+<test-method duration-ms="3101" finished-at="2021-01-25T15:37:11Z" name="Should see LIST USERS of all existing users" started-at="2021-01-25T15:37:08Z" status="PASS"/>
+<test-method duration-ms="649" finished-at="2021-01-25T15:37:12Z" name="Should see SINGLE USER data" started-at="2021-01-25T15:37:11Z" status="PASS"/>
+<test-method duration-ms="686" finished-at="2021-01-25T15:37:13Z" name="Should see SINGLE USER NOT FOUND error code" started-at="2021-01-25T15:37:12Z" status="PASS"/>
+<test-method duration-ms="1427" finished-at="2021-01-25T15:37:14Z" name="CREATE a user" started-at="2021-01-25T15:37:13Z" status="PASS"/>
+<test-method duration-ms="1054" finished-at="2021-01-25T15:37:15Z" name="CREATE a user_2" started-at="2021-01-25T15:37:14Z" status="PASS"/>
+<test-method duration-ms="975" finished-at="2021-01-25T15:37:16Z" name="LOGIN - SUCCESSFUL by a user" started-at="2021-01-25T15:37:15Z" status="PASS"/>
+<test-method duration-ms="921" finished-at="2021-01-25T15:37:17Z" name="LOGIN - UNSUCCESSFUL by a user" started-at="2021-01-25T15:37:16Z" status="PASS"/>
+<test-method duration-ms="3919" finished-at="2021-01-25T15:37:21Z" name="Should see the list of users with DELAYED RESPONSE" started-at="2021-01-25T15:37:17Z" status="PASS"/>
+</class>
+<class name="Qumu  Sample Test">
+<test-method duration-ms="1168" finished-at="2021-01-25T15:37:22Z" name="Sample" started-at="2021-01-25T15:37:21Z" status="PASS"/>
+</class>
 <class name="Checkout items in the basket">
-<test-method duration-ms="2596" finished-at="2021-01-25T10:41:45Z" name="Check item total cost and tax" started-at="2021-01-25T10:41:43Z" status="SKIP"/>
+<test-method duration-ms="3655" finished-at="2021-01-25T15:37:26Z" name="Check item total cost and tax" started-at="2021-01-25T15:37:22Z" status="PASS"/>
 </class>
 </test>
 </suite>

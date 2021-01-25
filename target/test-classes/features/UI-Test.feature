@@ -1,3 +1,4 @@
+@UI
 Feature: Checkout items in the basket
   Please use home page of https://www.saucedemo.com/
 
@@ -18,14 +19,14 @@ Feature: Checkout items in the basket
     And I verify that the QTY count for each item should be 1
     And I remove the following item:
       | Sauce Labs Fleece Jacket |
-#    And I  should see 3 items added to the shopping cart
-#    And I click on the CHECKOUT button
-#    And I type "FirstName" for First Name
-#    And I type "LastName" for Last Name
-#    And I type "EC1A 9JU" for ZIP/Postal Code
-#
-#    When I click on the CONTINUE button
-#    Then Item total will be equal to the total of items on the list
-#    And a Tax rate of 8 % is applied to the total
+    And I  should see 3 items added to the shopping cart
+    And I click on the CHECKOUT button
+    And I type "FirstName" for First Name
+    And I type "LastName" for Last Name
+    And I type "EC1A 9JU" for ZIP/Postal Code
+
+    When I click on the CONTINUE button
+    Then Item total will be equal to the total of items on the list
+    And a Tax rate of 8 % is applied to the total
 
 

@@ -254,7 +254,6 @@ public class BaseApi {
 	}
 	
 	public Response getApiResponse() {
-		System.out.println("-------->" + this.response);
 		return this.response;
 	}
 }
